@@ -9,3 +9,7 @@ Instructions:
 5.) In the termnal, RUn 'php artisan serve' to run the project.<br>
 6.) Import the 'multisys.postman_collection' to your postman to use for testing.<br>
 7.) Enjoy Testing :).
+
+Take Note:
+
+I entered 6 products with 2 availability_stocks each
