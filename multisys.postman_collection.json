@@ -2,18 +2,27 @@
 	"variables": [],
 	"info": {
 		"name": "multisys",
-		"_postman_id": "80e16302-a4cf-9fe9-e991-38df232b33c2",
+		"_postman_id": "f688643e-977c-4790-0a86-6b2e49818ffb",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "register",
+			"name": "order",
 			"request": {
-				"url": "",
-				"method": "GET",
-				"header": [],
-				"body": {},
+				"url": "http://localhost:8000/api/order",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer QCiEnumznfYkF1zmjHDs2ggGyH0ADWuO5ciSUFNTxSXPwZ7IigsEufj035v6",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"product_id\": \"2\",\n\"quantity\": \"2\"\n}"
+				},
 				"description": ""
 			},
 			"response": []
@@ -21,21 +30,55 @@
 		{
 			"name": "login",
 			"request": {
-				"url": "",
-				"method": "GET",
+				"url": "http://localhost:8000/api/login",
+				"method": "POST",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\": \"multisystesting@gmail.com\",\n\"password\": \"pass1234\"\n}"
+				},
 				"description": ""
 			},
 			"response": []
 		},
 		{
-			"name": "order",
+			"name": "register",
 			"request": {
-				"url": "",
-				"method": "GET",
+				"url": {
+					"raw": "http://localhost:8000/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "sample@gmail.com",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"equals": true,
+							"description": "",
+							"disabled": true
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\": \"multisystesting@gmail.com\",\n\"password\": \"pass1234\"\n}"
+				},
 				"description": ""
 			},
 			"response": []
